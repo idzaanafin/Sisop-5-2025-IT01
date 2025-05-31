@@ -12,5 +12,7 @@ void clear(byte *buf, unsigned int size);
 
 void atoi(char *str, int *num);
 void itoa(int num, char *str);
+int safe_mod(int a, int b);
+
 
 #endif // __STD_LIB_H__

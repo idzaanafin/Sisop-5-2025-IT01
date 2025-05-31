@@ -1,11 +1,12 @@
-# Sisop-5-2025-IT-Template
+# Sisop-5-2025-IT-01
 
 ## Kelompok
 
 Nama | NRP
 --- | ---
-Amoes Noland | 5027231028
-Rafi' Afnaan Fathurrahman | 5027231040
+Ahmad Idza Anafin | 5027241017
+Ivan Syarifuddin | 5027241045
+Diva Aulia Rosa | 5027241003
 
 ## Daftar Isi
 
@@ -169,6 +170,8 @@ Pada suatu hari, anda merasa sangat lelah dari segala macam praktikum yang sudah
    * `kernel` : mengkompilasi `kernel.c` menjadi `kernel.o` pada direktori `bin/` dan mengkompilasi `kernel.asm` menjadi `kernel_asm.o` pada direktori `bin/`.
    * `link` : menggabungkan `bootloader.bin`, `kernel.o`, `kernel_asm.o`, dan `std_lib.o` menjadi `floppy.img`.
    * `build` : menjalankan perintah `prepare`, `bootloader`, `stdlib`, `kernel`, dan `link`.
+   * `clean` : menghapus semua isi direktori `bin/`.
+   * `all` : menjalankan perintah `clean`, dan `build`
 
 ### Video Demonstrasi
 
@@ -179,4 +182,10 @@ https://github.com/user-attachments/assets/1cfa66b1-b2f5-4e3e-a4b2-ec8b012f6fbb
 
 ## Laporan
 
-> Isi sesuai pengerjaan.
+### Penggunaan
+* `make all`
+* jalankan bochs dan load `bochsrc.txt`, atau jika via terminal `bochs -f bochsrc.txt` (pastikan menjalankan command satu directory dengan file txt nya)
+* setelah booting akan tampil banner dan bisa digunakan
+
+### Dokumentasi Command
+* 

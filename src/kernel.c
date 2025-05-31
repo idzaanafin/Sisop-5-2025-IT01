@@ -2,21 +2,49 @@
 #include "kernel.h"
 
 int main() {
-  clearScreen();
+  clearScreen(0x07);  
   shell();
 }
 
-void printString(char *str)
-{
-  //TODO: Implementasi fungsi untuk mencetak string
+void printString(char *str) {
+    while (*str != '\0') {
+        interrupt(0x10, 0x0E00 + *str, 0, 0, 0);        
+        str++;
+    }
 }
 
-void readString(char *buf)
-{
-  //TODO: Implementasi fungsi untuk membaca string
+
+void readString(char *buf) {
+    char ch;
+    int i = 0;
+    while (1) {
+        ch = interrupt(0x16, 0x0000, 0, 0, 0) & 0xFF;
+        if (ch == 0x0D) break;
+        if (ch == 0x08) {
+            if (i > 0) {
+                i--;
+                printString("\b \b");
+            }
+        } else {
+            buf[i++] = ch;
+            interrupt(0x10, 0x0E00 + ch, 0, 0, 0);
+        }
+    }
+    buf[i++] = 0x0D;
+    buf[i++] = 0x0A;
+    buf[i] = '\0';  
+    printString("\r\n");
 }
 
-void clearScreen()
+void clearScreen(int color)
 {
-  //TODO: Implementasi fungsi untuk membersihkan layar
+  int i;
+  for (i = 0; i < 80 * 25 * 2; i += 2) {
+    putInMemory(0xB800, i, ' ');
+    putInMemory(0xB800, i + 1, color); 
+  }
+  
+  interrupt(0x10, 0x0200, 0, 0, 0);
 }
+
+
