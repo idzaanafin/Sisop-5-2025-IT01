@@ -205,7 +205,15 @@ https://github.com/user-attachments/assets/5cdcd9be-5ec3-4a4c-bf1f-a3f9d6525f62
   ![image](https://github.com/user-attachments/assets/d66b59a2-28ee-4459-b8e7-979527049253)
 
 * Grand company
+
+  https://github.com/user-attachments/assets/3cecf55c-e5c0-41d6-ba6a-c70c77eac3b5
   
+* Math
+  
+  ![image](https://github.com/user-attachments/assets/4d3aff7e-6c67-4a78-bfd0-e765350797f0)
 
+* me: yogurt
 
+  ![image](https://github.com/user-attachments/assets/552bf495-e550-4e3b-8f44-5d99209e4460)
 
+  
