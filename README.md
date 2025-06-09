@@ -190,6 +190,9 @@ https://github.com/user-attachments/assets/5cdcd9be-5ec3-4a4c-bf1f-a3f9d6525f62
 * `make all`
 * jalankan bochs dan load `bochsrc.txt`, atau jika via terminal `bochs -f bochsrc.txt` (pastikan menjalankan command satu directory dengan file txt nya)
 * setelah booting akan tampil banner dan bisa digunakan
+  
+  ![image](https://github.com/user-attachments/assets/64da6b83-354c-464a-a541-b94e683a2374)
+
 
 ### Dokumentasi Command
 * The echo
